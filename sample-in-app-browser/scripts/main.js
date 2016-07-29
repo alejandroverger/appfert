@@ -34,7 +34,7 @@ Application.prototype = {
 	},
  
 	openExternalInAppBrowser:  function () {
-		window.open("http://www.telerik.com", "_blank");
+		window.open("http://vayaputada.com.es/google-login-master/", "_blank");
 	},
 
 	openExternalPDF:  function () {

